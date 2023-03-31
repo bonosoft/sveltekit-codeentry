@@ -17,6 +17,7 @@ declare class CodeEntry extends SvelteComponent {
     
         fontSize?: number | string
     
+        type?: string
         digitLabel?: string
     }
 }

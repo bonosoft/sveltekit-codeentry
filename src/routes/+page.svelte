@@ -7,6 +7,7 @@
         console.log(detail);
         result = detail;
     }
+    let passwordResult = '';
 
 </script>
   
@@ -40,10 +41,13 @@
 
     <Codeentry idPrefix="ce5" count="10" fontSize="2" borderRadius="8"/>
 
-
-
 </div>
 
+<h1>As Password</h1>
+<div class="lightmode">
+    <Codeentry idPrefix="ce6" type="password"  on:code={({ detail }) => passwordResult=detail} />
+    <p>Received code by event: "{passwordResult}"</p>
+</div>
 
 
 

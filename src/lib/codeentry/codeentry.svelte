@@ -18,6 +18,7 @@
 
 	export let fontSize = "4.5";
 
+	export let type = 'number';
 	export let digitLabel = 'Digit';
 
 
@@ -139,9 +140,9 @@
 			<label for="codeentry-{index}">{digitLabel} {index}</label>
 		{/each}
 		<div>
-			<input class="octdigit" type="number" pattern="[0-9]*"  value="" autocomplete="one-time-code" id="{idPrefix}-0" name="{idPrefix}-0" style="--textcolor:{textColor};--bordercolor:{borderColor};--borderselectcolor:{borderSelectColor};--bgcolor:{bgColor};--fontsize:{fontSize+"em"};--borderradius:{borderRadius}px;--borderwidth:{borderWidth}px;" required>
+			<input class="octdigit" type="{type}" pattern="[0-9]*"  value="" autocomplete="one-time-code" id="{idPrefix}-0" name="{idPrefix}-0" style="--textcolor:{textColor};--bordercolor:{borderColor};--borderselectcolor:{borderSelectColor};--bgcolor:{bgColor};--fontsize:{fontSize+"em"};--borderradius:{borderRadius}px;--borderwidth:{borderWidth}px;" required>
 			{#each Array(parseInt(count)-1) as _, index (index)}
-			<input class="octdigit" type="number" pattern="[0-9]*" min="0" max="9" maxlength="1"  value="" id="{idPrefix}-{1+index}" name="{idPrefix}-{1+index}" style="--textcolor:{textColor};--bordercolor:{borderColor};--borderselectcolor:{borderSelectColor};--bgcolor:{bgColor};--fontsize:{fontSize+"em"};--borderradius:{borderRadius}px;--borderwidth:{borderWidth}px;" required>
+			<input class="octdigit" type="{type}" pattern="[0-9]*" min="0" max="9" maxlength="1"  value="" id="{idPrefix}-{1+index}" name="{idPrefix}-{1+index}" style="--textcolor:{textColor};--bordercolor:{borderColor};--borderselectcolor:{borderSelectColor};--bgcolor:{bgColor};--fontsize:{fontSize+"em"};--borderradius:{borderRadius}px;--borderwidth:{borderWidth}px;" required>
 			{/each}
 		</div>
 	</fieldset>
