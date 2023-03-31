@@ -65,3 +65,15 @@ You can also change then border width and border coner radius for the digits.
 
 ![Code Entry](https://github.com/bonosoft/sveltekit-codeentry/blob/3abaecfc3c288c761021e4923987a8574ba1f608/readme/codeentry3.png?raw=true)
 
+
+## Use as a password by hiding entry digits 
+If the code is not a onetime code, but a pin code used as password, you will want to change the input type to password so the entered digits are not shown.
+```ts
+<script lang="ts">
+    let passwordResult = '';
+</script>
+
+<Codeentry idPrefix="ce6" type="password"  on:code={({ detail }) => passwordResult=detail} />
+<p>Received code by event: "{passwordResult}"</p>
+```
+![Code Entry](https://github.com/bonosoft/sveltekit-codeentry/blob/1dc48d559d2e68dcf8e9ccf648900a32ed069b03/readme/codeentry4.png?raw=true)
