@@ -30,8 +30,9 @@ The codeentry is a list of numeric form input elements. By using the on:code eve
 
 <Codeentry on:code={handleClicked} />
 <p>Received code by event: "{result}"</p>
-
 ```
+![Code Entry](https://github.com/bonosoft/sveltekit-codeentry/blob/3abaecfc3c288c761021e4923987a8574ba1f608/readme/codeentry1.png?raw=true)
+
 
 ## Use with a Html Form
 If you want to add the code entry with other elements in a form, simply do not handle the on:code event. 
@@ -49,6 +50,7 @@ You can override style with CSS, or use the attributes for chaning the colors us
 
 <Codeentry idPrefix="ce3" textColor="#F92" bgColor="#333" borderColor="#666"/>
 ```
+![Code Entry](https://github.com/bonosoft/sveltekit-codeentry/blob/3abaecfc3c288c761021e4923987a8574ba1f608/readme/codeentry2.png?raw=true)
 
 ## Digits count, Size, border width and radius settings
 You can set the number of digits to show. For a low number you might want to increase the size (default font size is 4.5) and to make room for a large number of digits, you might want a small size.
@@ -60,4 +62,6 @@ You can also change then border width and border coner radius for the digits.
 
     <Codeentry idPrefix="ce5" count="10" fontSize="2" borderRadius="8"/>
 ```
+
+![Code Entry](https://github.com/bonosoft/sveltekit-codeentry/blob/3abaecfc3c288c761021e4923987a8574ba1f608/readme/codeentry3.png?raw=true)
 
