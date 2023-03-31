@@ -54,7 +54,7 @@ You can override style with CSS, or use the attributes for chaning the colors us
 ```
 ![Code Entry](https://github.com/bonosoft/sveltekit-codeentry/blob/3abaecfc3c288c761021e4923987a8574ba1f608/readme/codeentry2.png?raw=true)
 
-## Digits count, Size, border width and radius settings
+## Digits count, size, border width and radius settings
 You can set the number of digits to show. For a low number you might want to increase the size (default font size is 4.5) and to make room for a large number of digits, you might want a small size.
 
 You can also change then border width and border coner radius for the digits.
@@ -79,3 +79,10 @@ If the code is not a onetime code, but a pin code used as password, you will wan
 <p>Received code by event: "{passwordResult}"</p>
 ```
 ![Code Entry](https://github.com/bonosoft/sveltekit-codeentry/blob/1dc48d559d2e68dcf8e9ccf648900a32ed069b03/readme/codeentry4.png?raw=true)
+
+## Handles copy and paste and quick entering
+If the user copy and pastes a code into a CodeEntry digit element, it will automatically distribute the code to following digits.
+
+It will also distribute digits if a user types more than one number into a digit really fast.
+
+If the code distribution fills all the digits, the code event will be send with the complete code. If the pasted code is longer than the number of digits, the last digit will be overwritten multiple times. Normally this will only trigger the event once, but some browsers might trigger the last code twice.
