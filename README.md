@@ -11,15 +11,17 @@ npm install @bonosoft/sveltekit-codeentry
 Now you can start adding code entry components to your pages.
 ```ts
 <script lang="ts">
-	import CodeEntry from "@bonosoft/sveltekit-codeentry"
+  import CodeEntry from "@bonosoft/sveltekit-codeentry"
 </script>
 
 <Codeentry />
 ```
+You will now have a 6 digit Time based ontime password element.
+
 The Code Entry can be modefied by adding different parameters.
 
 ## Use without a Html Form
-The codeentry is a list of numeric form input elements. By using the on:code event triggered by the entry of the last digit, you dont have to include it in a form.
+The codeentry is a list of numeric form input elements. By using the on:code event, triggered by the entry of the last digit, you dont have to include it in a form.
 ```ts
 <script lang="ts">
     let result = '';
@@ -39,7 +41,7 @@ If you want to add the code entry with other elements in a form, simply do not h
 ```ts
 <Codeentry idPrefix="ce1" />
 ```
-The input digit elements will have name attributes like "ce1-0 ... ce1-6". If you have more code entry instances, you can use tge idPrefix to set the prefix for both ID and Name attibutes.
+The input digit elements will have name attributes like "ce1-0, ... ce1-6". If you have more code entry instances on your page, you can use the idPrefix to set the prefix for both ID and Name attibutes on all input elements.
 
 ## Front, back, select and border colors, for use in dark mode
 You can override style with CSS, or use the attributes for chaning the colors used to draw the code entry digits.
