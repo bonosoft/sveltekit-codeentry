@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts">
-	import { BROWSER } from 'esm-env'
+	import { onMount } from 'svelte'
 	import { createEventDispatcher } from 'svelte'
 	
 	export let idPrefix = "ce1";
@@ -24,7 +24,7 @@
 
 	const dispatch = createEventDispatcher<{code: string}>()
 
-	if (BROWSER) {
+	onMount(async () => {
 
 		function splitNumber(e: Event) {
 			let data = (e as InputEvent).data;
@@ -130,7 +130,7 @@
 		});
 
 		document.getElementById(idPrefix + "-0")?.addEventListener('input', splitNumber);
-	}
+	});
 </script>
 
 

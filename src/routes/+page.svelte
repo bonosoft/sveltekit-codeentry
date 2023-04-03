@@ -49,8 +49,6 @@
     <p>Received code by event: "{passwordResult}"</p>
 </div>
 
-
-
 <style>
     .lightmode {
         padding: 20px;
