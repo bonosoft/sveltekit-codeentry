@@ -1,7 +1,7 @@
 {
 	"name": "@bonosoft/sveltekit-codeentry",
 	"description": "Code Entry component for SvelteKit",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"author": "Bonosoft",
 	"license": "MIT",
 	"repository": {
